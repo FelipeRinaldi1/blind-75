@@ -18,18 +18,19 @@ I implemented a Set to store seen numbers. Instead of iterating through a list t
 
 complexity: O(n)
 
-```Typescript
+## Solution in Typescript
+
+```typescript
 function containsDuplicate(nums: number[]): boolean {
-const numbersSet = new Set<number>([]);
+    const numbersSet = new Set<number>([]);
 
-        for (let i = 0; i < nums.length; i++) {
-            if (numbersSet.has(nums[i])) {
-                return true;
-            }
-            numbersSet.add(nums[i]);
+    for (let i = 0; i < nums.length; i++) {
+        if (numbersSet.has(nums[i])) {
+            return true;
         }
-
-        return false;
-
+        numbersSet.add(nums[i]);
     }
+
+    return false;
+}
 ```
